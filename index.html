@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rohith Saravanan's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.9);
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80") no-repeat center center/cover;
+            margin-top: 72px;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px #000;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            text-shadow: 1px 1px 6px #000;
+        }
+        
+        section {
+            padding: 100px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 80px auto;
+        }
+        
+        section h2 {
+            margin-bottom: 25px;
+            font-size: 2rem;
+            border-bottom: 2px solid #ffd700;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+        
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.8);
+        }
+        
+        .project h3 {
+            margin-top: 0;
+        }
+        
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .skill {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 160px;
+            text-align: left;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        
+        .skill h4 {
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .progress {
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 8px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #ffd700;
+            width: 0;
+            transition: width 1s;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(18, 18, 18, 0.9);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            font-style: italic;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form button {
+            padding: 12px 20px;
+            background: #ffd700;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .contact-form button:hover {
+            background: #e6c200;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 80px 15px;
+            }
+            .skills {
+                justify-content: center;
+            }
+            .skill {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rohith Saravanan</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Crafting Insights through Machine Learning and Analytics</p>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a driven AI Engineer with a passion for leveraging machine learning to solve complex problems. Currently pursuing a B.Tech in Artificial Intelligence and Data Science, I aim to develop innovative AI solutions and contribute to cutting-edge technologies.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Spotify Music Recommendation (Clone)</h3>
+                <p>
+                    Engineered an AI-powered music recommendation system for Spotify, leveraging user data and preferences.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Employee Login System</h3>
+                <p>
+                    Streamlined the login process with a user-friendly interface, implementing robust password encryption and SQL queries for efficient user validation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h4>Python</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>C++</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>SQL</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Web Development</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Data Analysis</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Cloud Architecture</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>
+                "Rohith is a dedicated and talented engineer who consistently delivers high-quality work." - Mentor
+            </p>
+        </div>
+        <div class="testimonial">
+            <p>
+                "His ability to solve complex problems with innovative solutions is impressive." - Peer
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form" onsubmit="return false;">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 Rohith Saravanan
+    </footer>
+</body>
+
+</html>
