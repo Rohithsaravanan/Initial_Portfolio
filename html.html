@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohith Saravanan's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.9);
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://example.com/hero-background.jpg') no-repeat center center/cover;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+        }
+        
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .project:hover {
+            transform: scale(1.05);
+        }
+        
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .skill {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 150px;
+            text-align: left;
+        }
+        
+        .skill h4 {
+            margin: 0;
+        }
+        
+        .progress {
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 5px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #4caf50;
+            width: 0;
+            transition: width 1s;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(18, 18, 18, 0.9);
+        }
+        
+        .testimonial {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .contact-form button {
+            padding: 10px 20px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .contact-form button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rohith Saravanan</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Crafting Insights through Machine Learning and Analytics</p>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a driven AI Engineer with a passion for leveraging machine learning to solve complex problems. Currently pursuing a B.Tech in Artificial Intelligence and Data Science, I aim to develop innovative AI solutions and contribute to cutting-edge
+            technologies.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Spotify Music Recommendation (Clone)</h3>
+                <p>Engineered an AI-powered music recommendation system for Spotify, leveraging user data and preferences.</p>
+            </div>
+            <div class="project">
+                <h3>Employee Login System</h3>
+                <p>Streamlined the login process with a user-friendly interface, implementing robust password encryption and SQL queries for efficient user validation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h4>Python</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>C++</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>SQL</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Web Development</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Data Analysis</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Cloud Architecture</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Rohith is a dedicated and talented engineer who consistently delivers high-quality work." - Mentor</p>
+        </div>
+        <div class="testimonial">
+            <p>"His ability to solve complex problems with innovative solutions is impressive." - Peer</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name"
